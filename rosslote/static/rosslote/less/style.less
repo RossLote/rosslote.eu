@@ -1,0 +1,287 @@
+@import 'flatstrap/variables.less';
+@import 'flatstrap/mixins.less';
+/*
+ * Globals
+ */
+
+.page-title{
+  
+  border-bottom: 1px solid #aaa;
+  @media(max-width: @screen-xs-max){
+    text-align: center;
+  }
+}
+
+.grid-margin-all{
+  margin: 15px;
+}
+
+.border-right{
+  @media(min-width: @screen-sm-min){
+    border-right: 1px solid #aaa;
+  }
+}
+
+.text-white{
+  color: #fff;
+}
+
+.text-black{
+  color: #000;
+}
+
+.text-grey{
+  color: #777;
+}
+
+
+
+ul.list-comma{
+  list-style: none;
+  margin: 0;
+  padding: 0px 0px 5px 5px;
+  &:first-letter{
+    text-transform: uppercase;
+  }
+  li{
+    display: inline;
+    &:after{
+      content: ", "
+    }
+
+    &:last-child{
+      &:after{
+        content: "."
+      }
+    }
+  }
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #2980B9;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html{
+  height: 100%;
+}
+html,
+body {
+  min-height: 100%;
+  .rgba-background(@white, 0.0);
+}
+
+footer{
+  margin-top: 30px;
+}
+header{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+body {
+  background: url('@{staticURL}/rosslote/img/cloth_alike.png') repeat center;
+  &.home-page{
+    height: 100%;
+  }
+  color: #333;
+  text-align: center;
+  //text-shadow: 0 1px 3px rgba(0,0,0,.2);
+  @media(min-width: @screen-sm-min){
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  }
+}
+
+.profile-image-wrapper{
+  padding: 30px;
+  @media(max-width: @screen-sm-max){padding: 10px;}
+  @media(max-width: @screen-xs-max){padding: 0px;}
+  padding-top: 30px !important;
+  img{
+    max-width: 180px;
+  }
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+.navbar-toggle{
+  border: 1px solid #fff;
+  .icon-bar{
+    background-color: #fff;
+  }
+}
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  a{
+    color: #000;
+  }
+}
+
+.masthead-nav {
+  > li {
+    display: inline-block;
+    
+    + li {
+      margin-left: 20px;
+    }
+    
+    > a {
+      padding-right: 0;
+      padding-left: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; /* IE8 proofing */
+      text-shadow: none;
+      border-bottom: 2px solid transparent;
+      
+      &:hover, &:focus{
+        background-color: transparent;
+        border-bottom-color: #aaa;
+      }
+    }
+    
+    &.active{
+      > a,
+      > a:hover,
+      > a:focus{
+        text-shadow: none;
+        color: #cb6233;
+        //border-bottom-color: #aaa;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    float: right;
+  }
+  @media(max-width: @screen-xs-max){
+    
+    > li{
+      display: block;
+      text-align: left;
+      margin-left: 20px;
+      
+      &.active{
+        >a{
+          color: #000;
+        }
+      }
+      
+      + li{
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.navbar-collapse{
+  @media(max-width: @screen-xs-max){
+    margin:  0 -30px;
+    .rgba-background(@black, 0.5);
+  }
+}
+
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 20px;
+  background: @white;
+  text-shadow: none;
+  color: #363636;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #fff; /* IE8 proofing */
+  font-size: 12px;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 980px;
+    .home-page &, .about-page{
+      width: 700px;
+    }
+  }
+}

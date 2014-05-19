@@ -1,0 +1,37 @@
+{% extends 'rosslote/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="cover">
+    <div class="row">
+        <div class="col-sm-3 hidden-xs">
+            <div class="profile-image-wrapper">
+                <img class="img-responsive js-hover-effect" src="{% static "rosslote/img/profile.png" %}" />
+            </div>
+            <div class="text-left">
+                <p>Likes</p>
+                <ul class="list-comma">
+                    <li>food</li>
+                    <li>climbing</li>
+                    <li>coding</li>
+                </ul>
+                <p>Likes</p>
+                <ul class="list-comma">
+                    <li>jhjhg</li>
+                    <li>xfjhg jhhfg</li>
+                    <li>jhg jjhg ghg</li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="col-sm-9 text-left">
+            <h1 class="page-title">About Me</h1>
+            <p><img class="col-xs-6 visible-xs grid-margin-all js-hover-effect" src="{% static "rosslote/img/profile.png" %}" />Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p>Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

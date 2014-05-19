@@ -1,0 +1,25 @@
+{% load active_tag %}
+
+<nav role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h3 class="masthead-brand"><a href="/">Ross Lote</a></h3>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav masthead-nav">
+        <li class="{% add_active request 'about' %}"><a href="{% url 'about' %}">About Me</a></li>
+        <li class="{% add_active request 'projects' %}"><a href="{% url 'projects' %}">Projects</a></li>
+        <li class="{% add_active request 'cv' %}"><a href="{% url 'cv' %}">CV</a></li>
+        <li class="{% add_active request 'zinnia:entry_archive_index' %}"><a href="{% url 'zinnia:entry_archive_index' %}">Blog</a></li>
+        <li class="{% add_active request 'contact' %}"><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+</nav>

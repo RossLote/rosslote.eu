@@ -1,0 +1,31 @@
+{% extends 'rosslote/skeleton.html' %}
+{% load static %}
+
+{% block body-background %}
+    
+{% endblock %}
+
+{% block body-classes %}home-page{% endblock %}
+
+{% block main-content %}
+    
+<header>
+    <div class="container">
+    
+    {% include "rosslote/includes/menu.html" %}    
+    
+    </div>
+</header>
+<section>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</section>
+<footer>
+    <div class="container text-center">
+        <p>&copy; Ross Lote.</p>
+    </div>
+</footer>
+
+{% endblock %}
